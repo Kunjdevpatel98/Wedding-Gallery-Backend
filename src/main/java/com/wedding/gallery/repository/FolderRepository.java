@@ -9,6 +9,6 @@ public interface FolderRepository extends JpaRepository<Folder, Long> {
 
     java.util.List<Folder> findByVisibleTrue();
 
-    @org.springframework.data.jpa.repository.Query("SELECT f FROM Folder f WHERE f.visible = true OR f.upcoming = true")
+    @org.springframework.data.jpa.repository.Query("SELECT f FROM Folder f WHERE f.visible = true")
     java.util.List<Folder> findOnlyVisible();
 }
